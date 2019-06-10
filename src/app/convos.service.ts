@@ -4,10 +4,14 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class ConvoService {
-    convos = [];
+convos = [{'id': 0, 'messages': []}, {'id': 1, 'messages': []}];
 
     constructor() {}
 
+    getConvos() {
+        return this.convos;
+    }
+    
     addConvo() {
         let id = Math.max(this.convos.map((convo) => convo.id)) + 1;
         this.convos.push({

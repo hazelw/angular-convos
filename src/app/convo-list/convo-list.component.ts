@@ -8,8 +8,13 @@ import { ConvoService } from '../convos.service';
     styleUrls: ['./convo-list.component.css']
 })
 export class ConvoListComponent {
+    convos = [];
+
     constructor(
         private convoService: ConvoService
-    ) {}
+    ) {
+        this.convos = convoService.getConvos();
+    }
+
 }
 
