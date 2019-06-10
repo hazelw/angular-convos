@@ -1,5 +1,5 @@
 <div *ngFor="let convo of convos">
-    <button class="button">
+    <button class="button" (click)="selectConvo(convo)">
         <span class="button-text">
             {{ convo.messages[convo.messages.length-1].text }}
             <button class="delete-button" (click)="deleteConvo(convo.id)">x</button>

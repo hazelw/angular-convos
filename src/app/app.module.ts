@@ -7,6 +7,7 @@ import { ConvoListComponent } from './convo-list/convo-list.component';
 import { AddConvoComponent } from './add-convo/add-convo.component';
 import { RightPanelComponent } from './right-panel/right-panel.component';
 import { ConvoPanelComponent } from './right-panel/convo-panel/convo-panel.component';
+import { MessageBoxComponent } from './right-panel/message-box/message-box.component';
 import { ConvoService } from './convos.service';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ConvoService } from './convos.service';
     ConvoListComponent,
     AddConvoComponent,
     RightPanelComponent,
-    ConvoPanelComponent
+    ConvoPanelComponent,
+    MessageBoxComponent
   ],
   imports: [
     BrowserModule,

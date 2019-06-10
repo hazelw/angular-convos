@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { ConvoService } from '../convos.service';
 
@@ -9,6 +9,7 @@ import { ConvoService } from '../convos.service';
 })
 export class ConvoListComponent {
     convos = [];
+    @Output() notify = new EventEmitter();
 
     constructor(
         private convoService: ConvoService
@@ -22,6 +23,10 @@ export class ConvoListComponent {
 
     deleteConvo(id) {
         this.convos = this.convoService.deleteConvo(id);
+    }
+
+    selectConvo(convo) {
+        console.log(convo);      
     }
 }
 

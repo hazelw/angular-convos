@@ -14,6 +14,7 @@ export class ConvoService {
             {'id': 1, 'timestamp': new Date().toString(), 'text': 'newer text'}
         ]}
     ];
+    selectedConvo = 0;
 
     constructor() {}
 
@@ -45,5 +46,10 @@ export class ConvoService {
             'text': text
         });
         return this.convos;
+    }
+
+    selectConvo(convo) {
+        this.selectedConvo = convo;
+        return selectedConvo;
     }
 }
