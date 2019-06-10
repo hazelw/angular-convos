@@ -11,5 +11,18 @@
 }
 
 .button-text {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    height: 16px
+}
+
+.delete-button {
+    align-self: flex-end;
+    position: relative;
+    top: -14px;
+    border: 1px black solid;
+    padding-left: 3px;
+    padding-right: 2px;
+    padding-bottom: 2px;
 }
