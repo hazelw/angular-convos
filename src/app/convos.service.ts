@@ -25,7 +25,7 @@ convos = [
         let id = Math.max(this.convos.map((convo) => convo.id)) + 1;
         this.convos.push({
             'id': id,
-            'messages': []
+            'messages': [{'id': 0, 'timestamp': new Date().toString(), 'text': 'new convo'}]
         });
         return this.convos;
     }
