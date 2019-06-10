@@ -1,0 +1,15 @@
+.convo-list {
+    width: 20%;
+    border-right: 1px black solid;
+}
+
+.button {
+    border-bottom: 1px black solid;
+    display: flex;
+    padding: 8px;
+    width: 100%;
+}
+
+.button-text {
+    flex-grow: 1;
+}

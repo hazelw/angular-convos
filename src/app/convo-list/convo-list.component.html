@@ -1,5 +1,5 @@
 <div *ngFor="let convo of convos">
-    <button>
-        {{ convo.messages[convo.messages.length-1].text }}
+    <button class="button">
+        <span class="button-text">{{ convo.messages[convo.messages.length-1].text }}</span>
     </button>
 </div>
