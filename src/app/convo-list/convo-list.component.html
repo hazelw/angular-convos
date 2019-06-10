@@ -1,5 +1,5 @@
 <div *ngFor="let convo of convos">
     <button>
-        some convo
+        {{ convo.messages[convo.messages.length-1].text }}
     </button>
 </div>

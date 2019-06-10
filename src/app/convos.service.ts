@@ -4,7 +4,16 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class ConvoService {
-convos = [{'id': 0, 'messages': []}, {'id': 1, 'messages': []}];
+convos = [
+    {'id': 0, 'messages': [
+        {'id': 0, 'timestamp': new Date().toString(), 'text': 'oldest text'},
+        {'id': 1, 'timestamp': new Date().toString(), 'text': 'newest text'}
+    ]},
+    {'id': 1, 'messages': [
+        {'id': 0, 'timestamp': new Date().toString(), 'text': 'older text'},
+        {'id': 1, 'timestamp': new Date().toString(), 'text': 'newer text'}
+    ]}
+];
 
     constructor() {}
 
@@ -27,7 +36,9 @@ convos = [{'id': 0, 'messages': []}, {'id': 1, 'messages': []}];
 
     addMessageToConvo(convoId, text) {
         let convo = this.convos.find((convo) => convo.id === convoId);
+        let id = Math.max(convo.messages.map((message) => message.id)) + 1;
         convo.messages.push({
+            'id': id,
             'timestamp': new Date().toString(),
             'text': text
         });
