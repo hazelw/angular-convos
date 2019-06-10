@@ -2,7 +2,7 @@
     <button class="button">
         <span class="button-text">
             {{ convo.messages[convo.messages.length-1].text }}
-            <span class="delete-button">x</span>
+            <button class="delete-button" (click)="deleteConvo(convo.id)">x</button>
         </span>
     </button>
 </div>

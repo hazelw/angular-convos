@@ -16,5 +16,12 @@ export class ConvoListComponent {
         this.convos = convoService.getConvos();
     }
 
+    ngOnChanges(changes) {
+        console.log(changes);
+    }
+
+    deleteConvo(id) {
+        this.convos = this.convoService.deleteConvo(id);
+    }
 }
 
