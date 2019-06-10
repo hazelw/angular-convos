@@ -23,6 +23,10 @@
     border-right: 1px black solid;
 }
 
+.right-panel {
+    width: 100%;
+}
+
 .message-list {
     display: flex;
     flex-direction: column;

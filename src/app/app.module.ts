@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConvoListComponent } from './convo-list/convo-list.component';
 import { AddConvoComponent } from './add-convo/add-convo.component';
+import { RightPanelComponent } from './right-panel/right-panel.component';
+import { ConvoPanelComponent } from './right-panel/convo-panel/convo-panel.component';
 import { ConvoService } from './convos.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConvoListComponent,
-    AddConvoComponent
+    AddConvoComponent,
+    RightPanelComponent,
+    ConvoPanelComponent
   ],
   imports: [
     BrowserModule,
